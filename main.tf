@@ -8,11 +8,12 @@ resource "aws_kms_key" "kms_key" {
 }
 
 resource "aws_resourcegroups_group" "resourcegroups_group" {
-  name = "${var.project_name}-group"
+  name        = "${var.project_name}-group"
+  description = "Resources created via s3-backend module."
   resource_query {
     query = <<JSON
       {
-        "ResourceTypeFilters": [ "AWS::EC2::Instance" ],
+        "ResourceTypeFilters": [ "AWS::AllSupported" ],
         "TagFilters": [{
         "Key": "ResourceGroup",
         "Values": ["${var.project_name}"]}]
