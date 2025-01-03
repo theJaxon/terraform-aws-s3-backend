@@ -54,3 +54,8 @@ No modules.
 |------|-------------|
 | <a name="output_configurations"></a> [configurations](#output\_configurations) | Should be used as an input when using the S3 backend provider. Contains S3 bucket name, used IAM role ARN, dynamodb table name and AWS region where the resources were deployed. |
 <!-- END_TF_DOCS -->
+
+---
+
+### References
+1. [Terraform in Action](https://www.manning.com/books/terraform-in-action)
