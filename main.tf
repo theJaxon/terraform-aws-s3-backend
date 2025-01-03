@@ -66,10 +66,10 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "s3_bucket_server_
 
 resource "aws_dynamodb_table" "dynamodb_table" {
   name         = "${var.project_name}-state-lock"
-  hash_key     = "LockId"
+  hash_key     = "LockID"
   billing_mode = "PAY_PER_REQUEST"
   attribute {
-    name = "LockId"
+    name = "LockID"
     type = "S"
   }
   tags = {
