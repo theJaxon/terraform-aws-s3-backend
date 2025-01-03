@@ -19,6 +19,6 @@ resource "aws_iam_role_policy" "iam_role_policy" {
   role = aws_iam_role.iam_role.id
   policy = templatefile("${path.module}/templates/iam-policy.json.tftpl", {
     dynamodb_table_arn = aws_dynamodb_table.dynamodb_table.arn,
-    s3_bucket_arn         = aws_s3_bucket.s3_bucket.arn
+    s3_bucket_arn      = aws_s3_bucket.s3_bucket.arn
   })
 }
