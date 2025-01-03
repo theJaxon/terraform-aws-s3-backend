@@ -4,6 +4,11 @@ variable "project_name" {
   default     = "s3-backend"
 }
 
+variable "aws_profile" {
+  description = "AWS profile to be used for provisioning resources (Should map to the profile in the shared credentials file)."
+  type = string
+}
+
 variable "princiapl_arn_list" {
   description = "List of principal ARNs allowed to assume the IAM role."
   type        = list(string)
