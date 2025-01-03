@@ -4,7 +4,16 @@
         {
             "Effect": "Allow",
             "Action": [
-                "s3:GetObject"
+                "s3:ListBucket"
+            ],
+            "Resource": "${s3_bucket_arn}"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject"
             ],
             "Resource": "${s3_bucket_arn}/*"
         },
@@ -15,7 +24,7 @@
                 "dynamodb:PutItem",
                 "dynamodb:DeleteItem"
             ],
-            "Resource": "[${dynamodb_table_arn}]"
+            "Resource": ["${dynamodb_table_arn}"]
         }
     ]
 }
