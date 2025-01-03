@@ -59,3 +59,4 @@ No modules.
 
 ## References
 1. [Terraform in Action](https://www.manning.com/books/terraform-in-action)
+2. [Terraform Best Practices - docs](https://www.terraform-best-practices.com/code-styling#terraform-docs)
