@@ -57,5 +57,5 @@ No modules.
 
 ---
 
-### References
+## References
 1. [Terraform in Action](https://www.manning.com/books/terraform-in-action)
