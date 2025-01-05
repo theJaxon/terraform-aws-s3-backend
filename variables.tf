@@ -4,7 +4,7 @@ variable "project_name" {
   default     = "s3-backend"
 }
 
-variable "princiapl_arn_list" {
+variable "principal_arn_list" {
   description = "List of principal ARNs allowed to assume the IAM role."
   type        = list(string)
   default     = null
