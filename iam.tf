@@ -1,13 +1,13 @@
 data "aws_caller_identity" "current_caller_identity" {}
 
 locals {
-  princiapl_arn_list = var.princiapl_arn_list == null ? [data.aws_caller_identity.current_caller_identity.arn] : var.princiapl_arn_list
+  principal_arn_list = var.principal_arn_list == null ? [data.aws_caller_identity.current_caller_identity.arn] : var.principal_arn_list
 }
 
 resource "aws_iam_role" "iam_role" {
   name = "${var.project_name}-assume-role"
   assume_role_policy = templatefile("${path.module}/templates/assume-role-policy.json.tftpl", {
-    principal_arn_list = local.princiapl_arn_list[0]
+    principal_arn_list = local.principal_arn_list[0]
   })
   tags = {
     ResourceGroup = var.project_name
